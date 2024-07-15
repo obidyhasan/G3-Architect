@@ -48,6 +48,10 @@
     margin: 20px 0;
 }
 
+.hide{
+    display: none;
+}
+
 /* 
 -------------------------- Header Section -----------------------
 */
@@ -178,11 +182,12 @@
 */
 .features-section{
     max-width: 1440px;
-    margin: 0 auto -100px;
+    margin: 0 auto;
 }
 
 .features-content{
     margin-right: 120px;
+    width: 50%;
 }
 
 .features-content h2{
@@ -207,13 +212,16 @@
 }
 
 .features-img{
+    width: 50%;
     position: relative;
     height: auto;
 }
 
 .features-img img{
-    height: 75%;
+    width: 100%;
+    height: 85%;
     object-fit: cover;
+    border-radius: 8px;
 }
 
 .experience-div{
@@ -224,7 +232,7 @@
     color: white;
     position: absolute;
     left: -70px;
-    top: 67%;
+    top: 76%;
 }
 
 .experience-div #year-experience{
@@ -246,11 +254,11 @@
 }
 
 .facts-container{
-    margin-top: 70px;
+    margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(4,200px);
     justify-content: space-evenly;
-    gap: 10px;
+    gap: 20px;
 }
 
 .fact-item{
@@ -296,6 +304,7 @@
 .our-sponsors-container{
     margin-top: 50px;
     display: grid;
+    gap: 30px;
     grid-template-columns: repeat(5, 1fr);
     align-items: center;
     justify-items: center;
@@ -321,4 +330,116 @@
 .footer-content{
     color: var(--dark-2);
     padding: 10px;
+}
+
+
+
+
+/* 
+-------------------------------------------- Responsive -------------------------------------------
+*/
+
+/* Small Device */
+@media screen and (max-width: 576px){
+
+    .menu{
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .menu-item{
+        margin: 0;
+    }
+
+    .menu-links{
+        padding: 10px;
+    }
+
+    .hero-content h1{
+        font-size: 2rem;
+    }
+
+    .about-section{
+        flex-direction: column-reverse;
+    }
+
+    .about-container,
+    .about-content,
+    .features-content,
+    .features-img{
+        width: 100%;
+    }
+    .about-container,
+    .facts-container,
+    .our-sponsors-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .about-container{
+        padding: 30px 0;
+    }
+
+    
+    .features-section,
+    .navbar
+    {
+        flex-direction: column;
+    }
+
+    .features-content{
+        margin-right: 0;
+    }
+
+    .features-img img{
+        width: 100%;
+        height: auto;
+    }
+
+    .experience-div{display: none;}
+
+}
+
+
+/* Medium Device */
+@media screen and (min-width: 576px) and (max-width: 992px){
+
+    .menu{
+        margin-top: 20px;
+        text-align: center;
+    }
+
+
+
+    .about-section{
+        flex-direction: column-reverse;
+    }
+
+    .about-container,
+    .about-content,
+    .features-content,
+    .features-img{
+        width: 100%;
+    }
+
+    .facts-container,
+    .our-sponsors-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-section,
+    .navbar{
+        flex-direction: column;
+    }
+
+    .features-content{
+        margin-right: 0;
+    }
+
+    .features-img img{
+        width: 100%;
+        height: auto;
+    }
+
+    .experience-div{display: none;}
+
 }
