@@ -38,6 +38,16 @@
     padding: 15px 20px;
 }
 
+.title-section{
+    font-size: 2rem;
+    color: var(--dark-1);
+}
+
+.description{
+    color: var(--dark-3);
+    margin: 20px 0;
+}
+
 /* 
 -------------------------- Header Section -----------------------
 */
@@ -168,7 +178,7 @@
 */
 .features-section{
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 0 auto -100px;
 }
 
 .features-content{
@@ -198,10 +208,12 @@
 
 .features-img{
     position: relative;
+    height: auto;
 }
 
 .features-img img{
     height: 75%;
+    object-fit: cover;
 }
 
 .experience-div{
@@ -221,3 +233,92 @@
 }
 
 
+/* 
+------------------------------------------ Facts Section --------------------------------------
+*/
+.facts-section{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.facts-content{
+    max-width: 540px;
+}
+
+.facts-container{
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(4,200px);
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.fact-item{
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.fact-item img{
+    width: 40px;
+}
+
+.fact-item h4{
+    font-size: 2rem;
+    margin: 12px 0 5px;
+    color: var(--dark-2);
+}
+
+.fact-item p{
+    font-weight: 600;
+    color: var(--dark-3);
+}
+
+
+/* 
+---------------------------------------- Our Sponsors Section ------------------------------
+*/
+.our-sponsors-section{
+    max-width: 1440px;
+    margin: 100px auto 70px;
+}
+
+.our-sponsors-content{
+    max-width: 540px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.our-sponsors-container{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+
+.our-sponsors-container img{
+    filter: grayscale(100%);
+}
+
+
+/* 
+------------------------------------------- Footer Section -----------------------------------
+*/
+.footer-section{
+    max-width: 1440px;
+    margin: 0 auto 70px;
+    background-color: var(--bg-color);
+    text-align: center;
+    border-radius: 6px;
+}
+
+.footer-content{
+    color: var(--dark-2);
+    padding: 10px;
+}
